@@ -1,10 +1,14 @@
 {
   "version": "0.1.0",
-  "name": "React Prod",
+  "name": "react_prod",
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test:unit": "craco test"
+    "test:unit": "craco test",
+    "test:e2e:open": "start-server-and-test start http-get://localhost:3000 cypress:open",
+    "test:e2e:run": "start-server-and-test start http-get://localhost:3000 cypress:run",
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@craco/craco": "^6.2.0",
@@ -44,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/cypress": "^7.0.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^7.0.1",
@@ -54,6 +59,7 @@
     "@types/react-dom": "^17.0.0",
     "autoprefixer": "^9.8.6",
     "craco-alias": "^3.0.1",
+    "cypress": "^8.2.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.2",
     "postcss": "^7.0.36",
