@@ -1,1 +1,0 @@
-The context directory should contain any global-level context state providers.
